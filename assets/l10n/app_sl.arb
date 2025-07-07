@@ -895,10 +895,6 @@
   "@noEarlierMessages": {
     "description": "Text to show at the start of a message list if there are no earlier messages."
   },
-  "mutedSender": "Utišan pošiljatelj",
-  "@mutedSender": {
-    "description": "Name for a muted user to display in message list."
-  },
   "revealButtonLabel": "Prikaži sporočilo utišanega pošiljatelja",
   "@revealButtonLabel": {
     "description": "Label for the button revealing hidden message from a muted sender in message list."
@@ -1161,7 +1157,7 @@
   "@markReadOnScrollSettingConversations": {
     "description": "Label for a value of setting controlling which message-list views should mark read on scroll."
   },
-  "initialAnchorSettingFirstUnreadConversations": "Prvo neprebrano v zasebnih pogovorih, najnovejše drugje",
+  "initialAnchorSettingFirstUnreadConversations": "Prvo neprebrano v pogovorih, najnovejše drugje",
   "@initialAnchorSettingFirstUnreadConversations": {
     "description": "Label for a value of setting controlling initial anchor of message list."
   },

@@ -168,6 +168,18 @@ Map<String, dynamic> _$ProfileFieldUserDataToJson(
   'rendered_value': instance.renderedValue,
 };
 
+PerUserPresence _$PerUserPresenceFromJson(Map<String, dynamic> json) =>
+    PerUserPresence(
+      activeTimestamp: (json['active_timestamp'] as num).toInt(),
+      idleTimestamp: (json['idle_timestamp'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$PerUserPresenceToJson(PerUserPresence instance) =>
+    <String, dynamic>{
+      'active_timestamp': instance.activeTimestamp,
+      'idle_timestamp': instance.idleTimestamp,
+    };
+
 SavedSnippet _$SavedSnippetFromJson(Map<String, dynamic> json) => SavedSnippet(
   id: (json['id'] as num).toInt(),
   title: json['title'] as String,
@@ -307,8 +319,6 @@ StreamMessage _$StreamMessageFromJson(Map<String, dynamic> json) =>
       senderRealmStr: json['sender_realm_str'] as String,
       timestamp: (json['timestamp'] as num).toInt(),
       flags: Message._flagsFromJson(json['flags']),
-      matchContent: json['match_content'] as String?,
-      matchTopic: json['match_subject'] as String?,
       conversation: StreamConversation.fromJson(
         StreamMessage._readConversation(json, 'conversation')
             as Map<String, dynamic>,
@@ -333,8 +343,6 @@ Map<String, dynamic> _$StreamMessageToJson(StreamMessage instance) =>
       'sender_realm_str': instance.senderRealmStr,
       'submessages': Poll.toJson(instance.poll),
       'flags': instance.flags,
-      'match_content': instance.matchContent,
-      'match_subject': instance.matchTopic,
       'type': instance.type,
       'stream_id': instance.streamId,
       'subject': instance.topic,
@@ -365,8 +373,6 @@ DmMessage _$DmMessageFromJson(Map<String, dynamic> json) => DmMessage(
   senderRealmStr: json['sender_realm_str'] as String,
   timestamp: (json['timestamp'] as num).toInt(),
   flags: Message._flagsFromJson(json['flags']),
-  matchContent: json['match_content'] as String?,
-  matchTopic: json['match_subject'] as String?,
   conversation: DmMessage._conversationFromJson(
     json['display_recipient'] as List,
   ),
@@ -389,8 +395,6 @@ Map<String, dynamic> _$DmMessageToJson(DmMessage instance) => <String, dynamic>{
   'sender_realm_str': instance.senderRealmStr,
   'submessages': Poll.toJson(instance.poll),
   'flags': instance.flags,
-  'match_content': instance.matchContent,
-  'match_subject': instance.matchTopic,
   'type': instance.type,
   'display_recipient': DmMessage._allRecipientIdsToJson(
     instance.allRecipientIds,
@@ -408,6 +412,11 @@ const _$EmojisetEnumMap = {
   Emojiset.googleBlob: 'google-blob',
   Emojiset.twitter: 'twitter',
   Emojiset.text: 'text',
+};
+
+const _$PresenceStatusEnumMap = {
+  PresenceStatus.active: 'active',
+  PresenceStatus.idle: 'idle',
 };
 
 const _$ChannelPropertyNameEnumMap = {

@@ -21,18 +21,18 @@ class ZulipLocalizationsDe extends ZulipLocalizations {
   String get aboutPageTapToView => 'Antippen zum Ansehen';
 
   @override
-  String get upgradeWelcomeDialogTitle => 'Welcome to the new Zulip app!';
+  String get upgradeWelcomeDialogTitle => 'Willkommen bei der neuen Zulip-App!';
 
   @override
   String get upgradeWelcomeDialogMessage =>
-      'You’ll find a familiar experience in a faster, sleeker package.';
+      'Du wirst ein vertrautes Erlebnis in einer schnelleren, schlankeren App erleben.';
 
   @override
   String get upgradeWelcomeDialogLinkText =>
-      'Check out the announcement blog post!';
+      'Sieh dir den Ankündigungs-Blogpost an!';
 
   @override
-  String get upgradeWelcomeDialogDismiss => 'Let\'s go';
+  String get upgradeWelcomeDialogDismiss => 'Los gehts';
 
   @override
   String get chooseAccountPageTitle => 'Konto auswählen';
@@ -450,6 +450,12 @@ class ZulipLocalizationsDe extends ZulipLocalizations {
   }
 
   @override
+  String get emptyMessageList => 'There are no messages here.';
+
+  @override
+  String get emptyMessageListSearch => 'No search results.';
+
+  @override
   String get messageListGroupYouWithYourself => 'Nachrichten mit dir selbst';
 
   @override
@@ -669,6 +675,15 @@ class ZulipLocalizationsDe extends ZulipLocalizations {
   String get userRoleUnknown => 'Unbekannt';
 
   @override
+  String get searchMessagesPageTitle => 'Search';
+
+  @override
+  String get searchMessagesHintText => 'Search';
+
+  @override
+  String get searchMessagesClearButtonTooltip => 'Clear';
+
+  @override
   String get inboxPageTitle => 'Eingang';
 
   @override
@@ -821,7 +836,7 @@ class ZulipLocalizationsDe extends ZulipLocalizations {
 
   @override
   String get initialAnchorSettingFirstUnreadConversations =>
-      'Erste ungelesene Nachricht in Einzelunterhaltungen, sonst neueste Nachricht';
+      'Erste ungelesene Nachricht in Unterhaltungsansicht, sonst neueste Nachricht';
 
   @override
   String get initialAnchorSettingNewestAlways => 'Neueste Nachricht';
@@ -880,9 +895,6 @@ class ZulipLocalizationsDe extends ZulipLocalizations {
 
   @override
   String get noEarlierMessages => 'Keine früheren Nachrichten';
-
-  @override
-  String get mutedSender => 'Stummgeschalteter Absender';
 
   @override
   String get revealButtonLabel =>

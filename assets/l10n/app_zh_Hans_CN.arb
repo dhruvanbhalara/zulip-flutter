@@ -405,7 +405,7 @@
   "@initialAnchorSettingNewestAlways": {
     "description": "Label for a value of setting controlling initial anchor of message list."
   },
-  "initialAnchorSettingFirstUnreadConversations": "在单个话题或私信中，从第一条未读消息开始；在其他情况下，从最新消息开始",
+  "initialAnchorSettingFirstUnreadConversations": "在单个话题或私信的第一条未读消息；在其他情况下的最新消息",
   "@initialAnchorSettingFirstUnreadConversations": {
     "description": "Label for a value of setting controlling initial anchor of message list."
   },
@@ -1130,10 +1130,6 @@
   "revealButtonLabel": "显示静音用户发送的消息",
   "@revealButtonLabel": {
     "description": "Label for the button revealing hidden message from a muted sender in message list."
-  },
-  "mutedSender": "静音发送者",
-  "@mutedSender": {
-    "description": "Name for a muted user to display in message list."
   },
   "mutedUser": "静音用户",
   "@mutedUser": {
